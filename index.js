@@ -10,9 +10,13 @@ program
   .option('-U, --url <url>', 'set database server', 'user:password@127.0.0.1:8086')
   .option('-d, --db <name>', 'set database name (logs)', 'logs')
   .option('-t, --table <name>', 'set database name (table)', 'table')
+  .option('-f, --fields [value]', 'insert fields into influxDB([])', list, [])
   .option('-q, --quiet', 'suppress stdin to stdout output (false)', false)
   .parse(process.argv)
 const dbUrl = url.resolve(program.url, '/' + program.db)
 const rl = carrier.carry(process.stdin)
 const influxDB = new Influx.InfluxDB(dbUrl)
 rl.on('line', insert.bind({program, influxDB}))
+function list (val) {
+  return val.split(',')
+}

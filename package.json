@@ -1,0 +1,33 @@
+{
+  "name": "pino-influxDB",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "bin": {
+    "pinoInfluxdb": "bin/cli"
+  },
+  "scripts": {
+    "test": "",
+    "start": "node test.js | node index.js -U http://xxx:xxx@127.0.0.1:8086 -d bind -t naos"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjwygjj/pino-influxdb.git"
+  },
+  "author": "wyg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjwygjj/pino-influxdb/issues"
+  },
+  "homepage": "https://github.com/jjwygjj/pino-influxdb#readme",
+  "dependencies": {
+    "carrier": "^0.3.0",
+    "commander": "^2.11.0",
+    "influx": "^5.0.7",
+    "pino": "^4.7.2",
+    "url": "^0.11.0"
+  }
+}

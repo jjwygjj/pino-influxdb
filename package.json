@@ -1,5 +1,5 @@
 {
-  "name": "pino-influxDB",
+  "name": "pino-influxdb",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
